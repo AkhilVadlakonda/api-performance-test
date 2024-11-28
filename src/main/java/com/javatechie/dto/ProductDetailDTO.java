@@ -13,6 +13,8 @@ public class ProductDetailDTO {
 
     private Long id;
 
+    private Long categoryId;
+
     private String categoryName;
 
     private String name;

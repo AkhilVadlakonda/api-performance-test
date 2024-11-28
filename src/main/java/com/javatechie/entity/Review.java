@@ -5,24 +5,29 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
+import java.sql.Timestamp;
+
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "products")
-public class Product {
+@Table(name = "reviews")
+public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
 
-    private String name;
+    private String reviewerName;
 
-    private String description;
+    private String comment;
 
-    private String status;
+    private int rating;
+
+    private Timestamp reviewDate;
 }

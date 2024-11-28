@@ -37,7 +37,7 @@ public class ProductSyncFacade {
         Inventory inventory = inventoryService.getInventoryByProductId(productId);
 
         //combine result
-        return new ProductDetailDTO(productId, product.getCategory().getName(),
+        return new ProductDetailDTO(productId, product.getCategory().getId(),product.getCategory().getName(),
                 product.getName(), product.getDescription(),
                 inventory.getAvailableQuantity(), price.getPrice(),
                 inventory.getStatus());

@@ -10,10 +10,11 @@ import com.javatechie.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.CompletableFuture;
 
-@Component
+@Service
 @Slf4j
 public class ProductASyncFacade {
 
@@ -57,7 +58,7 @@ public class ProductASyncFacade {
 
         //build and return
 
-        return new ProductDetailDTO(productId, product.getCategory().getName(),
+        return new ProductDetailDTO(productId, product.getCategory().getId(), product.getCategory().getName(),
                 product.getName(), product.getDescription(),
                 inventory.getAvailableQuantity(), price.getPrice(),
                 inventory.getStatus());

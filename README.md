@@ -1,5 +1,6 @@
-# api-performance-demo
+# Use case of api-performance using Async and Snc
 
+# Below is the DB schema
 ```
 DB-SCHEMA
 
