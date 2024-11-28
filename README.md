@@ -1,4 +1,4 @@
-# Use case of api-performance using Async and Snc
+# Use case of api-performance using Async and Sync
 
 # Below is the DB schema
 ```
